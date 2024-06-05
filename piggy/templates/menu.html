@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}
+Menu
+{% endblock title %}
+{% block body %}
+<center>
+    <h1> Menu </h1>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Slno</th>
+            <th scope="col">Item_Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">price</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in items %}
+          <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td>{{item.item_name}}</td>
+            <td>{{item.item_desc}}</td>
+            <td>{{item.item_price}}</td>
+            <td>
+                <a href="update{{item.pk}}"><input type="submit" value="Update"></a>
+                <a href="delete{{item.pk}}"><input type="submit" value="Delete"></a>
+            </td>
+          </tr>
+          {% endfor %}
+          
+        </tbody>
+      </table>
+</center>
+{% endblock body %}
