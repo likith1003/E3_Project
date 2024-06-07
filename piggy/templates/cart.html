@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}
+cart
+{% endblock title %}
+{% block body %}
+<h1>cart Page</h1>
+{% for item in items %}
+  <h1>{{item.item_name}}</h1>
+{% endfor %}
+{% endblock body %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}
+Additem
+{% endblock title %}
+{% block body %}
+<center>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h1>additem</h1>
+        {{EIFO.as_p}}
+        <input type="submit" value="Additem">
+    </form>
+</center>
+{% endblock body %}

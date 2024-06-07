@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}
+Master_login
+{% endblock title %}
+{% block body %}
+<center>
+    <h1> Master login Page</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="text" name="un" placeholder="Username"> <br><br>
+        <input type="text" name="pw" placeholder="Password"> <br><br>
+        <input type="submit" value="Login">
+    </form>
+</center>
+{% endblock body %}

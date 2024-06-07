@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}
+Home
+{% endblock title %}
+{% block body %}
+{% if user.is_authenticated %}
+<h1>Welcome to Piggy Mr/ Mrs {{UO.first_name}}</h1>
+{% endif %}
+<h1>Welcome to Clone Application of Swiggy</h1>
+{% endblock body %}
